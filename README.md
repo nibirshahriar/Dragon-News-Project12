@@ -32,22 +32,11 @@ Users can browse news by category, view detailed articles, and enjoy a clean mod
 
 ---
 
-## 📂 Folder Structure
+# 📰The Dragon News
 
-```bash
-src/
- ├── app/
- │    ├── (main)/
- │    ├── news/
- │    ├── category/
- │    └── layout.jsx
- │
- ├── components/
- │    ├── homepage/
- │    ├── shared/
- │
- ├── lib/
- │    └── data.js
- │
- └── assets/
+A modern and responsive news web application built with **Next.js 15**
 
+## ✨ Md. Nibir Shahriar ✨
+
+Frontend Developer passionate about building modern web applications using **React**, **Next.js**, and **Tailwind CSS**.
+ 
