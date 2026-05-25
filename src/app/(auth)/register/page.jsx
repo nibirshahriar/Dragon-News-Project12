@@ -29,6 +29,12 @@ const RegisterPage = () => {
       callbackURL: "/",
     });
     console.log("data and error", res, error);
+    if (error) {
+      alert(error.message);
+    }
+    if (res) {
+      alert("Registration successful! You can now log in.");
+    }
   };
   console.log(errors);
   return (

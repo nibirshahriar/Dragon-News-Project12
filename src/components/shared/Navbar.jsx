@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import useravatar from "@/assets/user.png";
 import Image from "next/image";
 import Navlink from "./Navlink";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+  console.log("user in navbar", user);
+
   return (
     <div className="w-7/12 mx-auto px-4 flex justify-between items-center mt-6">
       <div></div>
@@ -22,13 +29,27 @@ const Navbar = () => {
           <Link href="/career">Career</Link>{" "}
         </li>
       </ul>
-      <div className="flex items-center gap-5">
-        <Image src={useravatar} alt="User Avatar" width={40} height={40} />
+      {user ? (
+        <div className="flex items-center gap-5">
+          <h2>Hello, {user?.name || "Guest"}</h2>
+          <Image
+            src={user?.image || useravatar}
+            alt="User Avatar"
+            width={100}
+            height={100}
+            className="rounded-full w-10 h-10 object-cover"
+          />
+          <button className="btn bg-purple-500 text-white">
+            {" "}
+            <Link href="/logout">LogOut</Link>{" "}
+          </button>
+        </div>
+      ) : (
         <button className="btn bg-purple-500 text-white">
           {" "}
           <Link href="/login">Login</Link>{" "}
         </button>
-      </div>
+      )}
     </div>
   );
 };
