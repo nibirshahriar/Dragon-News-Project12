@@ -19,7 +19,7 @@ const Navbar = () => {
         </li>
         <li>
           {" "}
-          <Navlink href="/career">Career</Navlink>{" "}
+          <Link href="/career">Career</Link>{" "}
         </li>
       </ul>
       <div className="flex items-center gap-4">
