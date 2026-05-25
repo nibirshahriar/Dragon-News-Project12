@@ -13,7 +13,7 @@ const LeftSidebar = ({ categories, activeId }) => {
               className={`${activeId === category.category_id ? "bg-slate-100" : ""}  rounded-md font-bold text-center text-lg`}
             >
               <Link
-                href={`/categories/${category.category_id}`}
+                href={`/category/${category.category_id}`}
                 className="block p-2"
               >
                 {category.category_name}
