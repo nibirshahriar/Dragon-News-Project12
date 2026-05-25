@@ -1,23 +1,47 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
+const news = [
+  {
+    id: 1,
+    title: "Bangladesh Wins Historic Cricket Series",
+  },
+  {
+    id: 2,
+    title: "New AI Technology Changes the Future",
+  },
+  {
+    id: 3,
+    title: "Global Market Sees Major Growth",
+  },
+  {
+    id: 4,
+    title: "Climate Summit 2026 Begins Today",
+  },
+  {
+    id: 5,
+    title: "Football League Final Ends Dramatically",
+  },
+];
+
 const BreakingNews = () => {
   return (
-    <div>
-      <Marquee>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam unde
-        deserunt facilis dolor aut excepturi dolorem! Illum eius aliquid atque
-        sunt mollitia, ullam vero dolor quibusdam dicta blanditiis, commodi,
-        repudiandae esse vitae odio eaque cupiditate laudantium natus deserunt
-        possimus facilis ducimus saepe non. Fugiat consequatur adipisci
-        exercitationem facere in reprehenderit laborum natus cum quos
-        accusantium dolorem deleniti ex, id repellendus odit accusamus
-        repudiandae? Accusantium dolorem modi eveniet ex reprehenderit debitis
-        ab, vero deleniti! Omnis, debitis possimus! Quisquam tenetur, reiciendis
-        maxime voluptatibus eaque quaerat molestiae natus magnam voluptates qui
-        modi error quo consequatur quae minima vero nulla facere? Minima, vero
-        voluptate.
-      </Marquee>
+    <div className="container mx-auto px-4">
+      <div className="flex items-center gap-4 bg-gray-100 p-3">
+        <button className="btn bg-pink-600 text-white border-none">
+          Latest News
+        </button>
+
+        <div className="flex-1 overflow-hidden">
+          <Marquee pauseOnHover={true} speed={60} gradient={false}>
+            {news.map((n) => (
+              <span key={n.id} className="mr-10 font-medium">
+                🔴 {n.title}
+              </span>
+            ))}
+          </Marquee>
+        </div>
+      </div>
     </div>
   );
 };
