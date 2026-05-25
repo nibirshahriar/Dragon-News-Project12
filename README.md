@@ -1,4 +1,4 @@
-# 📰 Dragon News
+# 📰The Dragon News
 
 A modern and responsive news web application built with **Next.js 15**, **Tailwind CSS**, and **DaisyUI**.  
 Users can browse news by category, view detailed articles, and enjoy a clean modern UI experience.
