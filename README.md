@@ -51,20 +51,11 @@ src/
  │
  └── assets/
 
-<div align="center">
 
 # 📰The Dragon News
 
 A modern and responsive news web application built with **Next.js 15**
 
-<img src="https://cdn-icons-png.flaticon.com/512/21/21601.png" width="120" />
-
-</div>
-
-<div align="center">
-
 ## ✨ Md. Nibir Shahriar ✨
 
 Frontend Developer passionate about building modern web applications using **React**, **Next.js**, and **Tailwind CSS**.
-
-</div>
