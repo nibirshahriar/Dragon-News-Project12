@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import useravatar from "@/assets/user.png";
 import Image from "next/image";
+import Navlink from "./Navlink";
 
 const Navbar = () => {
   return (
@@ -10,15 +11,15 @@ const Navbar = () => {
       <ul className="flex items-center gap-4 text-gray-700">
         <li>
           {" "}
-          <Link href="/">Home</Link>{" "}
+          <Navlink href="/">Home</Navlink>{" "}
         </li>
         <li>
           {" "}
-          <Link href="/about">About</Link>{" "}
+          <Navlink href="/about">About</Navlink>{" "}
         </li>
         <li>
           {" "}
-          <Link href="/career">Career</Link>{" "}
+          <Navlink href="/career">Career</Navlink>{" "}
         </li>
       </ul>
       <div className="flex items-center gap-4">
