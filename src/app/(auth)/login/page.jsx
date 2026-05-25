@@ -18,7 +18,7 @@ const LoginPage = () => {
     // console.log({ email, password });
     console.log(data);
   };
-
+  console.log(errors);
   return (
     <div className="max-w-7xl mx-auto min-h-[80vh] flex justify-center items-center bg-slate-50 mt-3">
       <div className="p-4 rounded-md bg-white shadow-md w-full max-w-md">
