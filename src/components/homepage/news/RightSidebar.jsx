@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import {
@@ -11,8 +12,15 @@ import swimmingImg from "@/assets/swimming.png";
 import classImg from "@/assets/class.png";
 import playgroundImg from "@/assets/playground.png";
 import bg from "@/assets/bg.png";
+import { authClient } from "@/lib/auth-client";
 
 const RightSidebar = () => {
+  const handleGoogleLogin = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="space-y-8">
       {/* Login Section */}
@@ -20,7 +28,10 @@ const RightSidebar = () => {
         <h2 className="font-bold text-2xl mb-4">Login With</h2>
 
         <div className="flex flex-col gap-4">
-          <button className="btn border-blue-500 text-blue-500 bg-white hover:bg-blue-50">
+          <button
+            className="btn border-blue-500 text-blue-500 bg-white hover:bg-blue-50"
+            onClick={handleGoogleLogin}
+          >
             <FaGoogle />
             Login with Google
           </button>

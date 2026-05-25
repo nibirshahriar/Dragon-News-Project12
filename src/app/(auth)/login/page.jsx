@@ -3,7 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const LoginPage = () => {
   const {
@@ -74,7 +74,7 @@ const LoginPage = () => {
               className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
               onClick={() => setIsShowPassword(!isShowPassword)}
             >
-              <FaEye />
+              {isShowPassword ? <FaEye /> : <FaEyeSlash />}
             </span>
             {errors.password && (
               <p className="text-red-500">{errors.password.message}</p>
