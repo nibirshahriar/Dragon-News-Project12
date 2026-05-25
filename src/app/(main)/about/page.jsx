@@ -1,5 +1,9 @@
 import React from "react";
 
+export const metadata = {
+  title: "The Dragon News - About Us",
+};
+
 const AboutPage = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">

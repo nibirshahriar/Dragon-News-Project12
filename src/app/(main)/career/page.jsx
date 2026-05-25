@@ -1,5 +1,9 @@
 import React from "react";
 
+export const metadata = {
+  title: "The Dragon News - Careers",
+};
+
 const CareerPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">

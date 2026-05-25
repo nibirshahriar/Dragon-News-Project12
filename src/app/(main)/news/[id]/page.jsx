@@ -4,6 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
+  const newsDetails = await getNewsDetailsById(id);
+
+  return {
+    title: `The Dragon News - ${newsDetails.title}`,
+  };
+};
+
 const NewsDetailPage = async ({ params }) => {
   const { id } = await params;
 
