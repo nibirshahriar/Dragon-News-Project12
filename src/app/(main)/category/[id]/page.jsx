@@ -4,7 +4,6 @@ import RightSidebar from "@/components/homepage/news/RightSidebar";
 import { getCategories, getNewsByCategoryId } from "@/lib/data";
 import React from "react";
 
-
 const NewsCategoryPage = async ({ params }) => {
   const { id } = await params;
 
@@ -12,7 +11,7 @@ const NewsCategoryPage = async ({ params }) => {
   const news = await getNewsByCategoryId(id);
 
   return (
-    <div className="container mx-auto grid grid-cols-12 gap-4 my-[50px]">
+    <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 my-[50px]">
       <div className="col-span-3">
         <LeftSidebar categories={categories} activeId={id} />
       </div>

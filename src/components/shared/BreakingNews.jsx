@@ -26,7 +26,7 @@ const news = [
 
 const BreakingNews = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4">
       <div className="flex items-center gap-4 bg-gray-100 p-3">
         <button className="btn bg-pink-600 text-white border-none">
           Latest News

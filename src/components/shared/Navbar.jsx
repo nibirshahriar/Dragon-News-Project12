@@ -6,7 +6,7 @@ import Navlink from "./Navlink";
 
 const Navbar = () => {
   return (
-    <div className="container mx-auto px-4 flex justify-between items-center mt-6">
+    <div className="w-7/12 mx-auto px-4 flex justify-between items-center mt-6">
       <div></div>
       <ul className="flex items-center gap-4 text-gray-700">
         <li>
@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link href="/career">Career</Link>{" "}
         </li>
       </ul>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-5">
         <Image src={useravatar} alt="User Avatar" width={40} height={40} />
         <button className="btn bg-purple-500 text-white">
           {" "}
