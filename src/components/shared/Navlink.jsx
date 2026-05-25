@@ -4,13 +4,19 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navlink = ({ href, children }) => {
-  const pathName = usePathname();
-  console.log("pathname", pathName);
+  const pathname = usePathname();
 
-  const isActive = pathName === href;
+  const isActive = pathname === href;
 
   return (
-    <Link href={href} className={isActive ? "text-pink-600" : "text-gray-600"}>
+    <Link
+      href={href}
+      className={`px-4 py-2 rounded-md font-medium transition-all duration-300 ${
+        isActive
+          ? "bg-pink-600 text-white"
+          : "text-gray-600 hover:bg-pink-100 hover:text-pink-600"
+      }`}
+    >
       {children}
     </Link>
   );
