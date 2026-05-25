@@ -50,3 +50,31 @@ src/
  │    └── data.js
  │
  └── assets/
+
+---
+
+# 👨‍💻 Author
+
+<div align="center">
+
+## ✨ Md. Nibir Shahriar ✨
+
+Frontend Developer passionate about building modern web applications using **React**, **Next.js**, and **Tailwind CSS**.
+
+🌐 Love building responsive and interactive user interfaces  
+🚀 Focused on clean code & modern web technologies  
+💡 Always learning and exploring new technologies
+
+</div>
+
+---
+
+# ⭐ Support
+
+<div align="center">
+
+If you like this project, don't forget to give it a ⭐ on GitHub!
+
+Made with ❤️ by **Md. Nibir Shahriar**
+
+</div>
