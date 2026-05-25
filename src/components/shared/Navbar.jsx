@@ -8,7 +8,7 @@ import Navlink from "./Navlink";
 import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
-  const { data: session } = authClient.useSession();
+  const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
   console.log("user in navbar", user);
 
@@ -29,7 +29,9 @@ const Navbar = () => {
           <Link href="/career">Career</Link>{" "}
         </li>
       </ul>
-      {user ? (
+      {isPending ? (
+        <span className="loading loading-spinner text-primary"></span>
+      ) : user ? (
         <div className="flex items-center gap-5">
           <h2>Hello, {user?.name || "Guest"}</h2>
           <Image
@@ -39,9 +41,11 @@ const Navbar = () => {
             height={100}
             className="rounded-full w-10 h-10 object-cover"
           />
-          <button className="btn bg-purple-500 text-white">
-            {" "}
-            <Link href="/logout">LogOut</Link>{" "}
+          <button
+            className="btn bg-purple-500 text-white"
+            onClick={async () => await authClient.signOut()}
+          >
+            LogOut
           </button>
         </div>
       ) : (
